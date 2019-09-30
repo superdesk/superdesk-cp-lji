@@ -66,3 +66,56 @@ ANALYTICS_ENABLE_SCHEDULED_REPORTS = strtobool(
 )
 HIGHCHARTS_SERVER_HOST = env('HIGHCHARTS_SERVER_HOST', 'localhost')
 HIGHCHARTS_SERVER_PORT = env('HIGHCHARTS_SERVER_PORT', '6060')
+
+# schema for images, video, audio
+SCHEMA = {
+    'picture': {
+        'headline': {'required': False},
+        'description_text': {'required': True},
+        'byline': {'required': False},
+        'copyrightnotice': {'required': False},
+    },
+    'video': {
+        'headline': {'required': False},
+        'description_text': {'required': True},
+        'media_type': {'required': False},
+        'byline': {'required': False},
+        'copyrightnotice': {'required': False},
+    },
+}
+
+# editor for images, video, audio
+EDITOR = {
+    'picture': {
+        'headline': {'order': 1, 'sdWidth': 'full'},
+        'description_text': {'order': 2, 'sdWidth': 'full', 'textarea': True},
+        'byline': {'displayOnMediaEditor': False},
+        'copyrightnotice': {'displayOnMediaEditor': False},
+    },
+    'video': {
+        'headline': {'order': 2, 'sdWidth': 'full'},
+        'description_text': {'order': 3, 'sdWidth': 'full', 'textarea': True},
+        'media_type': {'order': 4, 'sdWidth': 'full'},
+        'byline': {'displayOnMediaEditor': False},
+        'copyrightnotice': {'displayOnMediaEditor': False},
+    },
+}
+
+SCHEMA['audio'] = SCHEMA['video']
+EDITOR['audio'] = EDITOR['video']
+
+# media required fields for upload
+VALIDATOR_MEDIA_METADATA = {
+    "headline": {
+        "required": False,
+    },
+    "description_text": {
+        "required": True,
+    },
+    "byline": {
+        "required": False,
+    },
+    "copyrightnotice": {
+        "required": False,
+    },
+}
