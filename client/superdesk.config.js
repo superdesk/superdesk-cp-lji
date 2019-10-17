@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         importApps: [
             'superdesk-planning'
         ],
-        defaultRoute: '/workspace/personal',
+        defaultRoute: '/workspace/monitoring',
 
         publisher: {
             protocol: 'https',
@@ -35,6 +35,12 @@ module.exports = function(grunt) {
 
         features: {
             preview: 1,
+            customAuthoringTopbar: {
+                toDesk: true,
+                publish: true,
+                publishAndContinue: false,
+            },
+            hideCreatePackage: true,
             swimlane: {defaultNumberOfColumns: 4},
             editor3: true,
             validatePointOfInterestForImages: true,
