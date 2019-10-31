@@ -60,7 +60,7 @@ BROKER_URL = env('CELERY_BROKER_URL', REDIS_URL)
 
 SECRET_KEY = env('SECRET_KEY', '')
 
-PUBLISH_ASSOCIATED_ITEMS = False
+PUBLISH_ASSOCIATED_ITEMS = True
 
 # Highcharts Export Server - default settings
 ANALYTICS_ENABLE_SCHEDULED_REPORTS = strtobool(
