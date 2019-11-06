@@ -3,7 +3,7 @@
     "license": "GPL-3.0",
     "dependencies": {
         "superdesk-analytics": "superdesk/superdesk-analytics#master",
-        "superdesk-core": "akintolga/superdesk-client-core#publish-buttons",
+        "superdesk-core": "superdesk/superdesk-client-core#develop",
         "superdesk-planning": "superdesk/superdesk-planning#master"
     }
 }
