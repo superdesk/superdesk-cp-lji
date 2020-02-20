@@ -74,14 +74,14 @@ SCHEMA = {
     'picture': {
         'headline': {'required': False},
         'description_text': {'required': True},
-        'byline': {'required': False},
+        'byline': {'required': True},
         'copyrightnotice': {'required': False},
     },
     'video': {
         'headline': {'required': False},
         'description_text': {'required': True},
         'media_type': {'required': False},
-        'byline': {'required': False},
+        'byline': {'required': True},
         'copyrightnotice': {'required': False},
     },
 }
@@ -91,14 +91,14 @@ EDITOR = {
     'picture': {
         'headline': {'order': 1, 'sdWidth': 'full'},
         'description_text': {'order': 2, 'sdWidth': 'full', 'textarea': True},
-        'byline': {'displayOnMediaEditor': False},
+        'byline': {'displayOnMediaEditor': True},
         'copyrightnotice': {'displayOnMediaEditor': False},
     },
     'video': {
         'headline': {'order': 2, 'sdWidth': 'full'},
         'description_text': {'order': 3, 'sdWidth': 'full', 'textarea': True},
         'media_type': {'order': 4, 'sdWidth': 'full'},
-        'byline': {'displayOnMediaEditor': False},
+        'byline': {'displayOnMediaEditor': True},
         'copyrightnotice': {'displayOnMediaEditor': False},
     },
 }
@@ -115,7 +115,7 @@ VALIDATOR_MEDIA_METADATA = {
         "required": True,
     },
     "byline": {
-        "required": False,
+        "required": True,
     },
     "copyrightnotice": {
         "required": False,
