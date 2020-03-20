@@ -74,7 +74,7 @@ SCHEMA = {
     'picture': {
         'headline': {'required': False},
         'description_text': {'required': True},
-        'byline': {'required': True},
+        'byline': {'required': True, 'maxlength': 100},
         'copyrightnotice': {'required': False},
     },
     'video': {
