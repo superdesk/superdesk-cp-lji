@@ -1,0 +1,9 @@
+{% extends "email_layout.txt" %}
+
+{% block content %}
+
+{{ body | get_text("html", True) }}
+
+{% endblock %}
+
+{% block footer %}{% endblock %}
