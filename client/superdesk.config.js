@@ -7,8 +7,10 @@
 module.exports = function(grunt) {
     return {
         apps: [
+            'superdesk.analytics',
         ],
         importApps: [
+            'superdesk-analytics',
         ],
         defaultRoute: '/workspace/monitoring',
 
