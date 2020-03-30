@@ -1,4 +1,4 @@
 {
     "headline": "Takedown Notice, Article annulé",
-    "body_html": "<p><b>Takedown NOTICE</b></p>\n\n<p>Please DO NOT USE story slugged {{ slugline }} headlined {{ headline }}. This story has been killed by its news editor.</p>\n\n<p>Regards,</p>\n\n<p>Local Journalism Initiative</p>\n\n<p><b>AVIS d'annulation</b></p>\n\n<p>Prière de NE PAS PUBLIER l'article slugged {{ slugline }} headlined {{ headline }}. Cet article a été annulé par le rédacteur en chef de la publication.</p>\n\n<p>Merci de votre collaboration,</p>\n\n<p>Initiative de journalisme local</p>"
+    "body_html": "<p><b>Takedown NOTICE</b></p>\n\n<p>Please DO NOT USE story slugged {{ slugline }} headlined {{ headline }}. This story has been killed by its news editor.</p>\n\n<p>Regards,</p>\n\n<p>Local Journalism Initiative</p>\n\n<p><b>AVIS d'annulation</b></p>\n\n<p>Prière de NE PAS PUBLIER l'article identifié {{ slugline }} et intitulé {{ headline }}. Cet article a été annulé par le rédacteur en chef de la publication.</p>\n\n<p>Merci de votre collaboration,</p>\n\n<p>Initiative de journalisme local</p>"
 }
