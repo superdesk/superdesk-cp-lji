@@ -19,8 +19,12 @@ module.exports = function(grunt) {
         langOverride: {
             'en': {
                 'ANPA Category': 'Category',
-                'ANPA CATEGORY': 'CATEGORY'
-            }
+                'ANPA CATEGORY': 'CATEGORY',
+                'About Superdesk': 'How to Use Superdesk',
+            },
+            'fr_CA': {
+                'About Superdesk': 'Comment utiliser Superdesk',
+            },
         },
 
         view: {
