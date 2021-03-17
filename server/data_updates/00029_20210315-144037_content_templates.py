@@ -7,21 +7,20 @@
 # Author  : Jérôme
 # Creation: 2021-03-15 14:40
 
-from superdesk.commands.data_updates import BaseDataUpdate
+from superdesk.commands.data_updates import DataUpdate
 from superdesk import get_resource_service
 
 
-class DataUpdate(BaseDataUpdate):
+class DataUpdate(DataUpdate):
 
     resource = "content_templates"
     desks_field = "template_desks"
 
     def forwards(self, mongodb_collection, mongodb_database):
         """Check templates to remove references to deleted desks (SDCP-488)"""
-        templates_service = get_resource_service(self.resource)
         desks_service = get_resource_service("desks")
 
-        for template in templates_service.find({}):
+        for template in mongodb_collection.find({}):
             desks = template.get(self.desks_field) or []
             to_delete = []
             for desk in desks:
