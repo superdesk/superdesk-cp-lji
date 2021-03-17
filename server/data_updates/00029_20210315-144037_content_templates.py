@@ -18,11 +18,10 @@ class DataUpdate(BaseDataUpdate):
 
     def forwards(self, mongodb_collection, mongodb_database):
         """Check templates to remove references to deleted desks (SDCP-488)"""
-        vocabularies_service = get_resource_service(self.resource)
+        templates_service = get_resource_service(self.resource)
         desks_service = get_resource_service("desks")
-        templates_collection = mongodb_database[self.resource]
 
-        for template in vocabularies_service.find({}):
+        for template in templates_service.find({}):
             desks = template.get(self.desks_field) or []
             to_delete = []
             for desk in desks:
@@ -33,7 +32,7 @@ class DataUpdate(BaseDataUpdate):
                 print(f"found deleted desk(s) in template {template.get('template_name')!r}")
                 desks = [d for d in desks if d not in to_delete]
                 print(
-                    templates_collection.update(
+                    mongodb_collection.update(
                         {"_id": template["_id"]},
                         {
                             "$set": {self.desks_field: desks},
