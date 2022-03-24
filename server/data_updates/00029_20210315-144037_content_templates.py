@@ -40,6 +40,5 @@ class DataUpdate(DataUpdate):
                 )
                 print(f"template {template.get('template_name')!r} fixed")
 
-
     def backwards(self, mongodb_collection, mongodb_database):
         pass
