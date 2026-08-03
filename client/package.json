@@ -3,12 +3,15 @@
     "license": "GPL-3.0",
     "dependencies": {
         "superdesk-analytics": "github:superdesk/superdesk-analytics#v2.1.2",
-        "superdesk-core": "github:superdesk/superdesk-client-core#v2.4.2"
+        "superdesk-core": "github:superdesk/superdesk-client-core#support/2.4"
     },
     "devDependencies": {
         "@superdesk/build-tools": "^1.0.18"
     },
     "scripts": {
         "build": "npx @superdesk/build-tools build-root-repo ./"
+    },
+    "volta": {
+        "node": "14.21.3"
     }
 }
